@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="2019,js," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="基本内容 特性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="19-3-27 js(1)">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/19-3-27js(1)/index.html">
+<meta property="og:site_name" content="ExcitingFrog">
+<meta property="og:description" content="基本内容 特性">
+<meta property="og:image" content="https://i.loli.net/2019/03/30/5c9f193b32c6d.png">
+<meta property="article:published_time" content="2019-03-27T10:28:59.000Z">
+<meta property="article:modified_time" content="2019-12-26T01:24:20.636Z">
+<meta property="article:author" content="Xingo">
+<meta property="article:tag" content="2019">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/30/5c9f193b32c6d.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/27/19-3-27js(1)/"/>
+
+
+
+
+
+  <title>19-3-27 js(1) | ExcitingFrog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ExcitingFrog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sometimes naive</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/19-3-27js(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xingo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/12/25/y21omR7vEg9fLTK.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ExcitingFrog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">19-3-27 js(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T18:28:59+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://i.loli.net/2019/03/30/5c9f193b32c6d.png" alt=""></p>
+<ul>
+<li>基本内容</li>
+<li>特性<a id="more"></a>
+<h3 id="基本内容"><a href="#基本内容" class="headerlink" title="基本内容"></a>基本内容</h3>js可以直接写在html中，但是不美观，可以在头部进行外部引用，即可引用目录文件下的js文件，也可以引用网络资源。<br></li>
+<li>var 进行赋值 也可以直接定义 会被声明为全局变量，影响其他js脚本的执行，可以在开头添加’use strict’来避免这个错误</li>
+<li>语句集合{}, 每个语句后加; 注释//</li>
+<li>浮点数存在误差 1/3 不等于 1-2/3</li>
+<li>var student = {name:bob,id:”ASD123”}对象</li>
+<li>function double(arg1,…){} 函数 自带arguments关键词 例如arguments.length</li>
+<li>var [a,c,..] = [1,2,..]解构赋值</li>
+<li>对象中可以添加方法。 对象中this指向本身<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> y = <span class="keyword">this</span>.num + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> number = &#123;</span><br><span class="line">  num: <span class="number">1</span>,</span><br><span class="line">  addo: add</span><br><span class="line">&#125;;</span><br><span class="line">number.addo();</span><br><span class="line">add.apply(number,[]);</span><br><span class="line"><span class="keyword">var</span> num = &#123;</span><br><span class="line">  number : <span class="number">1</span>,</span><br><span class="line">  add : <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    number = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.number + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">num.add();</span><br></pre></td></tr></table></figure></li>
+<li>箭头函数 funcname = (arg1,….)=&gt;{} 箭头函数明确指明了this指向该函数内 对象外可以通过apply来对this进行指向<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta"> 'use strict'</span></span><br><span class="line"> <span class="keyword">var</span> num = &#123;</span><br><span class="line">   number : <span class="number">1</span>,</span><br><span class="line">   add : <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="keyword">this</span>.number + <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> num.add.apply(num,[]);</span><br><span class="line"></span><br><span class="line"><span class="meta"> 'use strict'</span></span><br><span class="line"><span class="keyword">var</span> num = &#123;</span><br><span class="line">  <span class="comment">//number : 1,</span></span><br><span class="line">  add : <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    number = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.number + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">num.add();</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><h4 id="1-js自动在行尾添加“-”"><a href="#1-js自动在行尾添加“-”" class="headerlink" title="1,js自动在行尾添加“;”"></a>1,js自动在行尾添加“;”</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span><span class="comment">//这样的return存在错误，因为行尾会自动加上;   就变成了 retrun;</span></span><br><span class="line">  x;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-“-”-与-“-”"><a href="#2-“-”-与-“-”" class="headerlink" title="2,“==” 与 “===”"></a>2,“==” 与 “===”</h4><p>在其他语言中一般用“==”进行判断时会同时判断类型，但js不一样，js使用“===”才会同时判断类型跟数值，使用“==”很可能会产生一些奇奇怪怪的错误。</p>
+<h4 id="3-异步执行"><a href="#3-异步执行" class="headerlink" title="3,异步执行"></a>3,异步执行</h4><p>因为js是单线程，所以执行是异步执行，在处理一些需要分步执行的函数不能简单进行罗列。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="4-变量提升"><a href="#4-变量提升" class="headerlink" title="4,变量提升"></a>4,变量提升</h4><p>所有申明的变量会提升到顶部，但不代表赋值会提升到顶部。</p>
+<h4 id="5-全局作用域"><a href="#5-全局作用域" class="headerlink" title="5,全局作用域"></a>5,全局作用域</h4><p>函数内的变量只存在于函数内，但上一层的变量，下一层函数可以使用。不存在任何函数内的变量就是存在于全局作用域。js默认有一个全局对象window。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">window</span>.num;<span class="comment">//10</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span></span>&#123;<span class="built_in">console</span>.log(<span class="string">"123"</span>);&#125;;</span><br><span class="line"><span class="built_in">window</span>.func;<span class="comment">//123</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="6-高阶函数"><a href="#6-高阶函数" class="headerlink" title="6,高阶函数"></a>6,高阶函数</h4><p>可以理解为函数中的函数</p>
+<ul>
+<li>map 作用于数组每个参数的函数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">double</span>(<span class="params">x</span>)</span>&#123;<span class="keyword">return</span> <span class="number">2</span>*x;&#125;;</span><br><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> result = num.map(double);<span class="comment">//2.4,6</span></span><br><span class="line"><span class="comment">//在我python爬虫二中 因为获取的链接都存在一个数组里 就可以通过这个思路来批量处理</span></span><br></pre></td></tr></table></figure></li>
+<li>reduce 把函数作用于数组进行累积运算<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> result = num.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>&#123;<span class="keyword">return</span> x*y;&#125;);<span class="comment">//result = 6</span></span><br></pre></td></tr></table></figure></li>
+<li>filter 剔除某些元素<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> result = num.filter(<span class="function">(<span class="params">x</span>)=&gt;</span>&#123;<span class="keyword">return</span> x%<span class="number">2</span> !== <span class="number">0</span>;&#125;)<span class="comment">//true 保留， false丢弃</span></span><br></pre></td></tr></table></figure></li>
+<li>sort 排序与上面类似默认x&lt;y返回-1，x==y返回0，x&gt;y返回1</li>
+<li>闭包 返回函数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">number</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    inc: <span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>&#123;<span class="keyword">return</span> x+y;&#125;)&#125;</span><br><span class="line">    <span class="comment">//mul: ()=&gt;&#123;return arr.reduce((x,y)=&gt;&#123;return x*y;&#125;)&#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">c1 = number(sum);</span><br><span class="line">c1.inc();</span><br><span class="line"></span><br><span class="line"><span class="comment">//当然也可以这样，区别在于上一个创建后没有直接使用，在之后的调用才使用</span></span><br><span class="line"><span class="keyword">var</span> sum = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">number</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>&#123;<span class="keyword">return</span> x*y;&#125;)  </span><br><span class="line">&#125;</span><br><span class="line">number(sum);</span><br></pre></td></tr></table></figure></li>
+<li>生成器 能够多次返回参数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">add</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> x;</span><br><span class="line">  <span class="keyword">yield</span> x+<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line">c = add(<span class="number">2</span>);</span><br><span class="line">c.next().value;<span class="comment">//2</span></span><br><span class="line">c.next().value;<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="包装对象"><a href="#包装对象" class="headerlink" title="包装对象"></a>包装对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>);<span class="comment">//是一个object对象</span></span><br><span class="line"><span class="keyword">typeof</span> num; <span class="comment">//object</span></span><br><span class="line">num === <span class="number">123</span> <span class="comment">//false</span></span><br><span class="line">num == <span class="number">123</span> <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h4><ul>
+<li>对象的原型可以进行指向</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = &#123;</span><br><span class="line">  number : <span class="number">1</span>,</span><br><span class="line">  print : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my num is "</span> + <span class="keyword">this</span>.number);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mynum = &#123;</span><br><span class="line">  number : <span class="number">2</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">mynum.__proto__ = num;<span class="comment">//一般很少用</span></span><br><span class="line">mynum.print();<span class="comment">// my num is 2</span></span><br><span class="line">numobj = <span class="built_in">Object</span>.create(num);</span><br><span class="line">numobj.number = <span class="number">10</span>;</span><br><span class="line">numobj.print();<span class="comment">//my num is 10</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>当创建一个对象，它会有一条原型链条。例如var arr=[1,2,3]其原型链条 <strong>arr —-&gt; Array.prototype —-&gt; Object.prototype —-&gt; null</strong> 而Array.prototype提供了indexOf()这些方法。</p>
+</li>
+<li><p>也可以用构造函数来创建对象</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">num</span> (<span class="params">number</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.number = number,</span><br><span class="line">  <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my num is "</span> + <span class="keyword">this</span>.number);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mynum = <span class="keyword">new</span> num(<span class="number">1</span>);</span><br><span class="line">mynum.print();<span class="comment">// my num is 1</span></span><br></pre></td></tr></table></figure>
+<p>当创建很多mynum时，每一个的print()函数都是独立的，如果想共用，可以将print()移到外面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">num</span> (<span class="params">number</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.number = number</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">num.prototype.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"my num is "</span> + <span class="keyword">this</span>.number);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">mynum = <span class="keyword">new</span> num(<span class="number">1</span>);</span><br><span class="line">mynum.print();<span class="comment">// my num is 1</span></span><br></pre></td></tr></table></figure>
+<p>不过还是用经典的class舒服一些</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">num</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span> (number)&#123;</span><br><span class="line">    <span class="keyword">this</span>.number = number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  print()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my num is "</span> + <span class="keyword">this</span>.number);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">mynum = <span class="keyword">new</span> num(<span class="number">1</span>);</span><br><span class="line">mynum.print();<span class="comment">// my num is 1</span></span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="noopener">廖雪峰js教程</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/2019/" rel="tag"># 2019</a>
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/26/19-3-26%20%E6%AF%8F%E5%91%A8%E6%9B%B4%E6%96%B0/" rel="next" title="19-3-26 每周">
+                <i class="fa fa-chevron-left"></i> 19-3-26 每周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/03/19-4-3%20js(2)/" rel="prev" title="19-4-3 js(2)">
+                19-4-3 js(2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://i.loli.net/2019/12/25/y21omR7vEg9fLTK.png"
+                alt="Xingo" />
+            
+              <p class="site-author-name" itemprop="name">Xingo</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ExcitingFrog" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wolifexingo@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本内容"><span class="nav-number">1.</span> <span class="nav-text">基本内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-js自动在行尾添加“-”"><span class="nav-number">2.1.</span> <span class="nav-text">1,js自动在行尾添加“;”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-“-”-与-“-”"><span class="nav-number">2.2.</span> <span class="nav-text">2,“&#x3D;&#x3D;” 与 “&#x3D;&#x3D;&#x3D;”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-异步执行"><span class="nav-number">2.3.</span> <span class="nav-text">3,异步执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-变量提升"><span class="nav-number">2.4.</span> <span class="nav-text">4,变量提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-全局作用域"><span class="nav-number">2.5.</span> <span class="nav-text">5,全局作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-高阶函数"><span class="nav-number">2.6.</span> <span class="nav-text">6,高阶函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#包装对象"><span class="nav-number">2.7.</span> <span class="nav-text">包装对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面向对象"><span class="nav-number">2.8.</span> <span class="nav-text">面向对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xingo</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script type="text/javascript" src="/js/src/click_show_text.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
