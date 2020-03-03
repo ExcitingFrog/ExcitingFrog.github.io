@@ -79,20 +79,21 @@
 
 
 
-<meta name="description" content="看文档很方便，我这里讲一些重点  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;  前期准备 会使用git 有github账户 nodejs环境">
+<meta name="description" content="看文档很方便，我这里讲一些重点  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="18-12-6 hexo">
 <meta property="og:url" content="http://yoursite.com/2018/12/06/18-12-6%20hexo/index.html">
 <meta property="og:site_name" content="ExcitingFrog">
-<meta property="og:description" content="看文档很方便，我这里讲一些重点  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;  前期准备 会使用git 有github账户 nodejs环境">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6a5363e3gy1fxx16ewqe0j20gl03it8q.jpg">
+<meta property="og:description" content="看文档很方便，我这里讲一些重点  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;">
+<meta property="og:image" content="https://i.loli.net/2020/03/02/gmbMat79PsOFlSK.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/03/02/MAQdlzPZUHR7hTv.jpg">
 <meta property="article:published_time" content="2018-12-06T10:28:59.000Z">
-<meta property="article:modified_time" content="2020-03-02T13:57:21.134Z">
+<meta property="article:modified_time" content="2020-03-03T09:29:55.781Z">
 <meta property="article:author" content="Xingo">
 <meta property="article:tag" content="2018">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/6a5363e3gy1fxx16ewqe0j20gl03it8q.jpg">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/02/gmbMat79PsOFlSK.jpg">
 
 
 
@@ -316,50 +317,59 @@
 <blockquote>
 <p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
 </blockquote>
+<a id="more"></a>
 <h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><ul>
 <li>会使用git</li>
 <li>有github账户</li>
 <li>nodejs环境</li>
 </ul>
-<a id="more"></a>
-
-<h4 id="使用git"><a href="#使用git" class="headerlink" title="使用git"></a>使用git</h4><br>
+<h3 id="使用git"><a href="#使用git" class="headerlink" title="使用git"></a>使用git</h3><br>
 这个应该是基本功，这里不做过多的介绍，不会的可以去看<br>
-[Git教程廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
-<h4 id="有github帐号并且已经关联主机"><a href="#有github帐号并且已经关联主机" class="headerlink" title="有github帐号并且已经关联主机"></a>有github帐号并且已经关联主机</h4><br>
+<p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git教程廖雪峰</a></p>
+<h3 id="有github帐号并且已经关联主机"><a href="#有github帐号并且已经关联主机" class="headerlink" title="有github帐号并且已经关联主机"></a>有github帐号并且已经关联主机</h3><br>
 在github的setting-SSH and GPG keys里面新建一个，title随便取，key里面把主机的公钥复制进去<br>
 **注意一点很关键的是，要把所有的公钥内容复制进去，*包括空格*，linux下用cat显示 然后再复制<br>**
-![](https://ws1.sinaimg.cn/large/6a5363e3gy1fxwrcuhlhsj20k806ggmj.jpg)
-.ssh是隐藏文件 要用ls -a,id_rsa是私钥，千万不能随便给别人，公钥问题不大
 
-<h4 id="配置nodejs环境"><a href="#配置nodejs环境" class="headerlink" title="配置nodejs环境"></a>配置nodejs环境</h4><br>
-> $ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
-<br> $ nvm install stable
-<br> npm install -g hexo-cli
-
-
-<h4 id="简单介绍hexo"><a href="#简单介绍hexo" class="headerlink" title="简单介绍hexo"></a>简单介绍hexo</h4><br>
+<p><img src="https://i.loli.net/2020/03/02/gmbMat79PsOFlSK.jpg" alt="1.jpg"></p>
+<p>.ssh是隐藏文件 要用ls -a,id_rsa是私钥，千万不能随便给别人，公钥问题不大</p>
+<h3 id="配置nodejs环境"><a href="#配置nodejs环境" class="headerlink" title="配置nodejs环境"></a>配置nodejs环境</h3><blockquote>
+<p>$wget -qO- <a href="https://raw.github.com/creationix/nvm/v0.33.11/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/v0.33.11/install.sh</a> | sh<br><br> $ nvm install stable<br><br> npm install -g hexo-cli</p>
+</blockquote>
+<h3 id="简单介绍hexo"><a href="#简单介绍hexo" class="headerlink" title="简单介绍hexo"></a>简单介绍hexo</h3><br>
 因为githubpages给的空间并不大，所以搭建个人博客使用静态博客比较好，省去了数据库之类的东西。原理就是你写完一个博客后
 ，hexo能够帮你生成相关页面以及内容。
-<br>hexo使用起来很简单，只需要记住几个常用的命令就够了
-- hexo init  初始化博客
-- hexo new "name" 新建一篇文章 在根目录下source/\_post下能找到相应文件，直接编辑就行，完成后
-- hexo generate 生成静态文件
-- hexo server 启动服务器 浏览器输入localhost:4000就可以预览内容了
-- hexo deploy 发布到githubpages上 访问xxxx.github.io 别人就能看到了
 
-<p>当然，在deploy前，你需要在github你的账号下建立一个xxxxx.github.io（xxxxx为你的github账号）<br>回到博客根目录，有一个_config.yml这是一个全局配置文件，与主题的配置文件相互独立。里面相关的内容都有解释，<br>需要改什么自己去改就行，非常的容易，例如下图配置deploy<br><img src="https://ws1.sinaimg.cn/large/6a5363e3gy1fxx16ewqe0j20gl03it8q.jpg" alt=""></p>
-<h4 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h4><p>我使用的主题</p>
+<p><br>hexo使用起来很简单，只需要记住几个常用的命令就够了</p>
+<ul>
+<li>hexo init  初始化博客</li>
+<li>hexo new “name” 新建一篇文章 在根目录下source/_post下能找到相应文件，直接编辑就行，完成后</li>
+<li>hexo generate 生成静态文件</li>
+<li>hexo server 启动服务器 浏览器输入localhost:4000就可以预览内容了</li>
+<li>hexo deploy 发布到githubpages上 访问xxxx.github.io 别人就能看到了</li>
+</ul>
+<p>当然，在deploy前，你需要在github你的账号下建立一个xxxxx.github.io（xxxxx为你的github账号）<br>回到博客根目录，有一个_config.yml这是一个全局配置文件，与主题的配置文件相互独立。里面相关的内容都有解释，<br>需要改什么自己去改就行，非常的容易，例如下图配置deploy<br><img src="https://i.loli.net/2020/03/02/MAQdlzPZUHR7hTv.jpg" alt="2.jpg"></p>
+<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><p>我使用的主题</p>
 <blockquote>
 <p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a>  (需要科学上网)</p>
 </blockquote>
 <p>如果想换主题也很容易，找到想要的hexo主题文件，放入theme下，在根目录下的_config.yml直接修改就行<br>主题文件下也有_config.yml两者一定要区别开来，主题下的是配置主题的相关内容,<br>其他的配置相关内容比如搜索服务等在文档里都有，按照步骤就行</p>
-<h4 id="添加域名"><a href="#添加域名" class="headerlink" title="添加域名"></a>添加域名</h4><br>
+<h3 id="添加域名"><a href="#添加域名" class="headerlink" title="添加域名"></a>添加域名</h3><br>
 只需要在你的项目里面添加一个CNAME文件 里面添加你的域名就行，域名解析
 >@          A             192.30.252.153
 ><br>@          A             192.30.252.154
 ><br>www      CNAME           username.github.io.
+
+<h3 id="个性化"><a href="#个性化" class="headerlink" title="个性化"></a>个性化</h3><ul>
+<li>加密博客</li>
+<li>个人头像</li>
+<li>背景动画</li>
+<li>友情链接</li>
+<li>标签页</li>
+<li>鼠标点击效果</li>
+<li>显示宽度</li>
+<li>……</li>
+</ul>
 
       
     </div>
@@ -543,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用git"><span class="nav-number">1.1.</span> <span class="nav-text">使用git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有github帐号并且已经关联主机"><span class="nav-number">1.2.</span> <span class="nav-text">有github帐号并且已经关联主机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置nodejs环境"><span class="nav-number">1.3.</span> <span class="nav-text">配置nodejs环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单介绍hexo"><span class="nav-number">1.4.</span> <span class="nav-text">简单介绍hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更改主题"><span class="nav-number">1.5.</span> <span class="nav-text">更改主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加域名"><span class="nav-number">1.6.</span> <span class="nav-text">添加域名</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用git"><span class="nav-number">2.</span> <span class="nav-text">使用git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有github帐号并且已经关联主机"><span class="nav-number">3.</span> <span class="nav-text">有github帐号并且已经关联主机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置nodejs环境"><span class="nav-number">4.</span> <span class="nav-text">配置nodejs环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单介绍hexo"><span class="nav-number">5.</span> <span class="nav-text">简单介绍hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改主题"><span class="nav-number">6.</span> <span class="nav-text">更改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加域名"><span class="nav-number">7.</span> <span class="nav-text">添加域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个性化"><span class="nav-number">8.</span> <span class="nav-text">个性化</span></a></li></ol></div>
             
 
           </div>
