@@ -87,7 +87,7 @@
 <meta property="og:description" content="稍微整理下自己的常用命令">
 <meta property="og:image" content="https://i.loli.net/2020/05/14/oryIbA5GseSv6B3.png">
 <meta property="article:published_time" content="2020-05-14T06:54:56.000Z">
-<meta property="article:modified_time" content="2020-05-14T06:55:36.906Z">
+<meta property="article:modified_time" content="2020-05-24T07:08:20.088Z">
 <meta property="article:author" content="Xingo">
 <meta property="article:tag" content="2020">
 <meta property="article:tag" content="linux">
@@ -315,11 +315,10 @@
         <p><img src="https://i.loli.net/2020/05/14/oryIbA5GseSv6B3.png" alt="81438953_p0.png"><br>稍微整理下自己的常用命令</p>
 <a id="more"></a>
 <p><a href="https://wangdoc.com/bash/intro.html" target="_blank" rel="noopener">教程</a><br><a href="https://github.com/ruanyf/simple-bash-scripts" target="_blank" rel="noopener">实例</a></p>
-<p>ctrl + L 清除屏幕 <br><br>ctrl + U 前删 <br><br>ctrl + K 后删 <br><br>ctrl + E 行尾 <br><br>ctrl + A 行首 <br><br>shift + pageup 上翻 <br><br>shift + pagedown 下翻 <br></p>
-<p>env 环境变量路径 <br></p>
-<p>目录 <br><br>/bin/sh  bash 等脚本执行 命令 <br><br>/boot 核心启动文件 <br><br>/dev 设备 <br><br>/etc 配置文件，目录 <br><br>/lib 动态链接库 <br><br>/usr 用户程序目录 <br><br>pwd 当前目录 <br><br>ls 查看目录内容  -a 查看隐藏文件 <br><br>/ root根目录 ~ 用户目录</p>
-<p>端口 进程 <br><br>top 实时进程 <br><br>lsof 端口 <br><br>netstat -tunlp <br><br>screen 多进程复用一个窗口 <br><br>screen -ls 查看所有的窗口 可以恢复<br><br>ifconfig 查看ip</p>
-<p>编辑文本 <br><br>awk 格式化文本常用 <br><br>sed 编辑到匹配的文本 <br><br>grep 查找文本 <br><br>egrep 扩展正则 <br><br>vim 编辑文本 i进入编辑模式 esc退出 :wq 保存退出 q!强制退出</p>
+<h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><p>ctrl + L 清除屏幕<br>ctrl + U 前删<br>ctrl + K 后删<br>ctrl + E 行尾<br>ctrl + A 行首<br>shift + pageup 上翻<br>shift + pagedown 下翻<br>env 环境变量路径<br>chmod 权限<br>su 用户切换<br>sudo root权限执行<br>apt-get 安装应用<br>tar -xvf 解压tar格式 unzip加压zip格式</p>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录 "></a>目录 <br></h3><p>/bin/sh  bash 等脚本执行 命令<br>/boot 核心启动文件<br>/dev 设备<br>/etc 配置文件，目录<br>/lib 动态链接库<br>/usr 用户程序目录<br>pwd 当前目录<br>ls 查看目录内容  -a 查看隐藏文件<br>/ root根目录 ~ 用户目录</p>
+<h3 id="端口-进程"><a href="#端口-进程" class="headerlink" title="端口 进程 "></a>端口 进程 <br></h3><p>top 实时进程<br>lsof 端口<br>netstat -tunlp<br>screen 多进程复用一个窗口<br>screen -ls 查看所有的窗口 可以恢复<br>ifconfig 查看ip</p>
+<h3 id="编辑文本"><a href="#编辑文本" class="headerlink" title="编辑文本 "></a>编辑文本 <br></h3><p>awk 格式化文本常用<br>sed 编辑到匹配的文本<br>grep 查找文本<br>egrep 扩展正则<br>vim 编辑文本 i进入编辑模式 esc退出 :wq 保存退出 q!强制退出</p>
 
       
     </div>
@@ -361,6 +360,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/24/20-5-24-linux%E4%BD%BF%E7%94%A8-2/" rel="prev" title="20-5-24 linux使用(2)">
+                20-5-24 linux使用(2) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -412,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -432,7 +444,7 @@
               
                 <a href="/archives%7C%7C%20archive">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -484,6 +496,25 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用"><span class="nav-number">1.</span> <span class="nav-text">常用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录 
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端口-进程"><span class="nav-number">3.</span> <span class="nav-text">端口 进程 
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑文本"><span class="nav-number">4.</span> <span class="nav-text">编辑文本 
+</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
