@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>20-02-22卡牌设计 - ExcitingFrog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="ExcitingFrog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="ExcitingFrog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="之前设计过一款桌游，印刷过测试过，不过只能达到能玩的水平。现在重新去看当初的设计，就会发现，如果单纯从平台来看，实体过于繁琐，电子版程序设计可能有点困难，其中各种联动的效果可能会产生过多的bug。而且平衡性方面太差。 当初的设计理念是以主要英雄之间的技能配合去打出华丽的combo连段效果，主要设计也是面向4-6人间的对决。现在重新思考觉得可以考虑设计成卡牌式rpg内容，这样子单人剧情也能设计。"><meta property="og:type" content="blog"><meta property="og:title" content="20-02-22卡牌设计"><meta property="og:url" content="http://xingo.club/2020/02/22/20-02-22%E5%8D%A1%E7%89%8C%E8%AE%BE%E8%AE%A1/"><meta property="og:site_name" content="ExcitingFrog"><meta property="og:description" content="之前设计过一款桌游，印刷过测试过，不过只能达到能玩的水平。现在重新去看当初的设计，就会发现，如果单纯从平台来看，实体过于繁琐，电子版程序设计可能有点困难，其中各种联动的效果可能会产生过多的bug。而且平衡性方面太差。 当初的设计理念是以主要英雄之间的技能配合去打出华丽的combo连段效果，主要设计也是面向4-6人间的对决。现在重新思考觉得可以考虑设计成卡牌式rpg内容，这样子单人剧情也能设计。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://xingo.club/img/og_image.png"><meta property="article:published_time" content="2020-02-22T03:59:25.000Z"><meta property="article:modified_time" content="2020-03-02T14:03:20.190Z"><meta property="article:author" content="Xingo"><meta property="article:tag" content="2020"><meta property="article:tag" content="卡牌"><meta property="article:tag" content="游戏设计"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://xingo.club/2020/02/22/20-02-22%E5%8D%A1%E7%89%8C%E8%AE%BE%E8%AE%A1/"},"headline":"20-02-22卡牌设计","image":["http://xingo.club/img/og_image.png"],"datePublished":"2020-02-22T03:59:25.000Z","dateModified":"2020-03-02T14:03:20.190Z","author":{"@type":"Person","name":"Xingo"},"publisher":{"@type":"Organization","name":"ExcitingFrog","logo":{"@type":"ImageObject","url":"http://xingo.club/img/logo.svg"}},"description":"之前设计过一款桌游，印刷过测试过，不过只能达到能玩的水平。现在重新去看当初的设计，就会发现，如果单纯从平台来看，实体过于繁琐，电子版程序设计可能有点困难，其中各种联动的效果可能会产生过多的bug。而且平衡性方面太差。 当初的设计理念是以主要英雄之间的技能配合去打出华丽的combo连段效果，主要设计也是面向4-6人间的对决。现在重新思考觉得可以考虑设计成卡牌式rpg内容，这样子单人剧情也能设计。"}</script><link rel="canonical" href="http://xingo.club/2020/02/22/20-02-22%E5%8D%A1%E7%89%8C%E8%AE%BE%E8%AE%A1/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="ExcitingFrog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-02-22T03:59:25.000Z" title="2020/2/22 上午11:59:25">2020-02-22</time>发表</span><span class="level-item"><time dateTime="2020-03-02T14:03:20.190Z" title="2020/3/2 下午10:03:20">2020-03-02</time>更新</span><span class="level-item">21 分钟读完 (大约3142个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">20-02-22卡牌设计</h1><div class="content"><p>之前设计过一款桌游，印刷过测试过，不过只能达到能玩的水平。现在重新去看当初的设计，就会发现，如果单纯从平台来看，实体过于繁琐，电子版程序设计可能有点困难，其中各种联动的效果可能会产生过多的bug。而且平衡性方面太差。</p>
+<p>当初的设计理念是以主要英雄之间的技能配合去打出华丽的combo连段效果，主要设计也是面向4-6人间的对决。现在重新思考觉得可以考虑设计成卡牌式rpg内容，这样子单人剧情也能设计。</p>
+<span id="more"></span>
+<h3 id="简括"><a href="#简括" class="headerlink" title="简括"></a>简括</h3><h4 id="卡组组成"><a href="#卡组组成" class="headerlink" title="卡组组成"></a>卡组组成</h4><p>1基本卡组 100</p>
+<p>2英雄卡 24</p>
+<p>3光环技能卡 6</p>
+<p>4血量卡 8</p>
+<p>5小标记  技能点20 火6  冰6  毒3 沉默6 睡眠3 击晕3 冰冻3</p>
+<p>6硬币4个</p>
+<h4 id="游戏机制"><a href="#游戏机制" class="headerlink" title="游戏机制"></a>游戏机制</h4><p>1手牌初始4张，每回合抽两张 上限8张</p>
+<p>1.5每回合攻击次数为0</p>
+<p>2技能相关</p>
+<pre><code>   技能使用需要技能卡/点 : 被动无需 小招1 光环2(光环持续三个回合) 大招3(智力型英雄2)
+
+   技能每回合只能使用一次，光环效果无限制？
+
+   技能效果判定无视防？
+</code></pre>
+<p>3特殊状态说明</p>
+<pre><code>   睡眠:跳过回合，无法抽牌
+
+   混乱:攻击时需判定 1/2几率攻击自己（最大2）
+
+   眩晕:可抽牌，无法攻击行动  能用卡牌技能
+
+   //冰冻:无法进攻
+</code></pre>
+<p>//4后手补偿，后手玩家1/4几率获得一技能点？</p>
+<p>//5我方回合内玩家先后手  自行决定</p>
+<p>//6一个阵营的全体玩家行动一次，称为一个回合</p>
+<p>6一回合指一轮 阵营玩家交替进行</p>
+<p>7技能卡可换成技能标记放在玩家英雄卡旁，不算手牌量，其他途径获得都以标记存在</p>
+<p>8损耗血量以遮挡表示  光环每回合下移</p>
+<p>9建议玩家3v3,4v4,2v2,神卡相当于三张普通英雄卡建议3v1，或1神1普v1神1普，以此类推</p>
+<p>//10队友死亡 场上技能点，手牌剩余我方玩家自行分配</p>
+<p>10 被动一回合使用一次</p>
+<p>11普通卡牌右上角数字代表一个完整卡组里有多少张这种牌</p>
+<p>12加血牌可救人</p>
+<h3 id="基本卡组"><a href="#基本卡组" class="headerlink" title="基本卡组"></a>基本卡组</h3><p>1普通攻击  不可重复使用  //15 20</p>
+<p>2普通防守(抵消三点，无法抵挡法术，魔攻≥5，才可使用抵消2)    6  </p>
+<p>3双防  可防守≤4的普通攻击，法术攻击  4</p>
+<p>4防守反击(防守普通攻击并返还伤害，敏捷型双倍返还，最高3)   //10 7</p>
+<p>5技能卡   15</p>
+<p>6沉默，沉默一名玩家1回合    //5 2</p>
+<p>7魔免，免疫一次技能卡（防 攻 血等）     5</p>
+<p>8攻击+2  当前回合攻击+2  效果持续一次    5</p>
+<p>9攻击次数+1  当前回合攻击次数+1 可重复使用    5</p>
+<p>10技能点+2  相当于两个技能点   5</p>
+<p>//11  每回合转移（敌我交替转移）抽牌判定防反 伤害5    1</p>
+<p>12 当前回合无视技能使用上限 5</p>
+<p>13 隐身，无法被普通攻击，下个我方回合攻击+1    5</p>
+<p>14  手牌≥7张时全部丢弃 回满血    2</p>
+<p>15 回血5     //5    3</p>
+<p>16  敌我全体回血3   2</p>
+<p>17  净化  除去我方全体不良buff    2</p>
+<p>18  敌我没人各得到1技能点    3</p>
+<p>19 当前我的回合无视技能使用上限（说句废话：用技能还是要技能点）</p>
+<p>试行</p>
+<p>20  （敌我回合）玩家使用某张牌 可以破坏这名玩家这张牌以及手牌内这张牌相同牌 数量2</p>
+<p>21 破坏在场所有技能点变成0（负的也能变） （手牌内不会） 2</p>
+<p>22 （无视沉默） 使用 ｛一次} 技能 或在对方回合使用一个技能 2</p>
+<p>23 没有玩家攻击（无需造成伤害）自己下回合攻击+2    2</p>
+<p>24双防取消，改为普通防守</p>
+<p>2½ 适当减少防守反击改成技能点  血石减少 冷血宫减少</p>
+<p>25手牌四张极其以上时，抽至8张，结束回合时全部丢弃</p>
+<p>26得到上回合使用过的两张除此以外的牌（回血类除外）</p>
+<p>27指定我与某个人丢弃全部牌，并抽取数量相同的牌</p>
+<p>28技能攻击+1，下个敌方回合受到的技能攻击+1</p>
+<h3 id="英雄卡"><a href="#英雄卡" class="headerlink" title="英雄卡"></a>英雄卡</h3><p>四属性 （神）S1  30血</p>
+<pre><code>被动 无需技能点
+
+小招  隐身一回合，无法被普通攻击，下个我方回合攻击+2
+
+光环  低于10血可施放 攻击乘2
+
+大招  敌方玩家全体受到4伤害
+</code></pre>
+<p>智力   （神）S2  30血</p>
+<pre><code>被动  血量低10，当即一次敌方全体伤害5
+
+小招  扣对方两点血，回自己相应血量，防依旧回血
+
+光环  一回合获得1技能点
+
+大招 对面全体睡眠一回合
+</code></pre>
+<p>敏捷   （神）S3  30血</p>
+<pre><code>被动  可以选择对方一名角色，查看他手牌
+
+小招  攻击附带造成每回合2点持续2对方回合的毒害，可叠加
+
+光环  不会受到普通伤害 ?
+
+大招  受到双倍伤害 但有5的攻击 关闭无需技能点
+</code></pre>
+<p>力量    （神）S4</p>
+<pre><code>被动  每回合多抽一次牌，多攻击一次
+
+小招  得到对方血量最少的英雄的一次攻击的控制权
+
+光环  对方不能以你为普通伤害对象 ?
+
+大招  6点伤害，若是己方则掉1点
+</code></pre>
+<p>智力  H1</p>
+<pre><code>被动 死亡后可以分配自己手牌 技能点
+
+小招 产生一个技能点 可以给队友 还可以再-2血产生一个
+
+光环 攻击自己的人视作混乱处理
+
+大招 -2血我方每人获得一技能点
+</code></pre>
+<p>敏捷 H2</p>
+<pre><code>被动 -2血 再抽抽3张牌
+
+小招 一次攻击对面无法防（只能用一次嗜血）
+
+光环 攻防转换使用
+
+大招 任何手牌都可以在一回合能当攻打出（不限次数）
+</code></pre>
+<p>H3</p>
+<p>A形态 10血</p>
+<pre><code>被动 回合开始时无手牌可抽三张
+
+小招 生成一个抵消2伤害护盾 存在一回合 ，或者造成2指定伤害
+
+光环 两回合 调整最上面五张牌位置 三技能点
+
+大招 转换人物
+</code></pre>
+<p>B形态 5血</p>
+<pre><code>被动 每回合血-1 攻+1 无法回血 无视不良buff  沉默
+
+小招 -1血 攻+1 一回合 这回合只能攻击一次的神圣攻击（最高等级的无视任何效果）（全局两次）
+
+光环（无需技能点） 存在三回合 若死亡 复活到3血 弃所有牌 抽三张 且无法被攻击直到我方回合
+
+大招 一血可用 攻击次数+1 任何卡可当攻打出 并加伤害4（防反算防）
+</code></pre>
+<p>力量 H4</p>
+<pre><code>被动：队友死亡 可得到他的四张牌
+
+小招：对方回合 收到攻击 技能伤害后可以选择 两点伤害给对方 或者我方任意玩家加血2
+
+光环：指定玩家 每回合血-1 自身血+2
+
+大招： 大招改成 一回合内获得死亡英雄技能 并获得3技能点 不限使用次数
+</code></pre>
+<p>智力    H5   10血</p>
+<pre><code>被动  敌方回血卡-1
+
+小招  1/2几率伤害2，成功后弹跳到下一个玩家，防守不了弹跳
+
+光环  当前回合普通攻击的敌人带标记，此后毒性技能伤害双倍
+
+大招  敌方全体受到2点毒伤 并0.5几率睡眠一回合
+</code></pre>
+<p>力量     H6        10血</p>
+<pre><code>被动  0.5连击时攻击+1
+
+小招  指定玩家伤害2，25%击晕
+
+光环  每个回合扣血1，攻击+2
+
+大招  低于6血可使用，攻为5，三个回合，其间无法使用技能
+</code></pre>
+<p>智力   H7               10血</p>
+<pre><code>被动 自己回合开始时 可以选择是否释放一次 敌我全体1伤害的技能伤害（试行）
+
+小招  接下来一回合，可抵消4伤害（累积） 能给队友释放
+
+光环  1，2回合+1 第三回合+2
+
+大招  我方全体生命+3
+</code></pre>
+<p>体力   H8           15血</p>
+<pre><code>被动  血之印记 自己使用血石，冷血宫回血+1
+
+小招  嘲讽 让敌方一名玩家攻击自己 自己受伤害（疾风步可触发） 对方双倍  且下回合不能攻击  伤害双方都可以防守掉
+
+光环  每个自己回合开始 攻+上回合损血量
+
+大招  回血4 上限变成15  
+</code></pre>
+<p>敏捷   H9      10血</p>
+<pre><code>被动  可丢一张手牌换取一张普通攻
+
+小招  下回合抽4张牌，但敌方回合内无法防反
+
+光环  攻击可指定两名玩家
+
+大招  每回合攻击次数+1，攻击力+2，无法使用技能，持续三回合
+</code></pre>
+<p>智力   H10       10血</p>
+<pre><code>被动  攻击可火种，防守依旧叠加 上限5
+
+小招  伤害2，〖三火种:伤害+1〗
+
+光环  每次攻击叠加2个火种
+
+大招  伤害5『5火种：+2伤害』
+</code></pre>
+<p>体力      H11         15血</p>
+<pre><code>被动 必须作为我方阵营后手 被连击时 伤害-1
+
+小招  冰封任意玩家，下回合内无法被攻击，攻击，施法，被施法
+
+光环 每回合血-1 一名玩家造成2伤害
+
+大招  我方我家除自己回血1，技能点+1，下回合敌方玩家攻击-1
+</code></pre>
+<p>敏捷    H12     10血</p>
+<pre><code>被动   强制对方一名攻击自己
+
+小招   3/4破坏任意玩家一个技能 1/4几率抢夺（对方没有技能点直接-1 即对方释放技能要补足所欠的才能放）（可以坑队友）
+
+光环   对方攻击后，1/2机率血+2，1/2不变     
+
+大招   偷取场上玩家技能释放?
+</code></pre>
+<p>力量     H13        10血</p>
+<pre><code>被动   当前回合不攻击，下个我方回合攻击+1 只能叠加一层
+
+小招   当前回合损血2，攻击+4
+
+光环   攻击+1，对方防反只有防的效果   
+
+大招   回血5
+</code></pre>
+<p>力量       H14         10血</p>
+<pre><code>被动   我方群攻技能伤害+1
+
+小招   伤害2 1/2几率+1，1/2几率-1
+
+光环   自己不会受到英雄指向，群体技能， buff，标记依旧     
+
+大招  攻击敌我全体，敌3+被动 我1
+</code></pre>
+<p>体力       H15         10血</p>
+<pre><code>被动  物法形态，物形态受到1/2物理伤害，2x魔伤，法同理，伤害四舍五入
+
+小招  2+加死亡队友个数的单体伤害
+
+光环  无视技能影响    
+
+大招  丢弃全部手牌，造成单体2+除去使用技能需技能点的卡牌的伤害
+</code></pre>
+<p>敏捷   H16        10血</p>
+<pre><code>被动   防反三倍伤害
+
+小招   下个回合异常状态几率加倍，下个我方回合一次攻击+3（不可叠加嗜血）
+
+光环   敌方攻击，伤害技能都能让自身回血2  
+
+大招   每回合血-1，攻+1，攻击次数+1，关闭无需技能点
+</code></pre>
+<p>力量    H17          10血</p>
+<pre><code>被动    失去两张牌加1血
+
+小招    造成对面全体1的伤害
+
+光环     自己攻击+2
+
+大招     攻击时强制对手会失去一张牌
+</code></pre>
+<p>智力   H18       10血</p>
+<pre><code>被动    0.5概率受到对于非智力英雄伤害-1
+
+小招   指定一名对手，丢弃1牌并50%几率受到1点伤害
+
+光环   死后依然存在2回合  给我方全体加攻+1 不死也加
+
+大招   自身血量降为1 造成减少血量+2伤害 无法防守
+</code></pre>
+<p>敏捷   H19     10血</p>
+<pre><code>被动    与H20同时登场时攻击+1 血量上限-2
+
+小招    指定一名玩家攻击自己，1/2再一个 （打自己伤害最高2）
+
+光环    每回合攻击次数+1
+
+大招    接下来4个我方回合每回合攻+1，可累计（加到5）
+</code></pre>
+<p>体力    H20 15血</p>
+<pre><code>被动    被攻击造成＞3伤害，抽牌一张
+
+小招    随机抢夺对方任意玩家两张手牌，或两名玩家各一张手牌
+
+光环    自身一回合受到伤害最多3点 
+
+大招    强制所有敌方英雄攻击自己，下回合敌方只能抽一张
+</code></pre>
+<p>可能技能<br>被动：抽牌前决定是否把一张牌给敌方，+1血</p>
+<p>光环：攻击时血-1 攻+2 一次</p>
+<p>光环：对方全体 一回合只能抽一张牌</p>
+<p>光环：每回合自己与队友多抽一张牌</p>
+<p>被动：无视隐身</p>
+<p>小招：对面使用防反作为防效果一次</p>
+<p>小招：使用对场上任意玩家一个小技能</p>
+<p>光环：队友及其自己 无攻时 获得攻击次数一次</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>20-02-22卡牌设计</p><p><a href="http://xingo.club/2020/02/22/20-02-22卡牌设计/">http://xingo.club/2020/02/22/20-02-22卡牌设计/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Xingo</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-02-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-03-02</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/2020/">2020</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%8D%A1%E7%89%8C/">卡牌</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/03/02/20-3-1-js-4-vue/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">19-5-25 js(4) vue</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/02/21/20-2-21-%E6%AF%8F%E5%91%A8/"><span class="level-item">20-2-21 每周</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://raw.githubusercontent.com/ExcitingFrog/img-cdn/master/avatar.png" alt="Xingo"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Xingo</p><p class="is-size-6 is-block">Sometimes naive</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>苏州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">78</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">25</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ExcitingFrog" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ExcitingFrog"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-07-27T13:22:23.000Z">2021-07-27</time></p><p class="title"><a href="/2021/07/27/21-7-27-%E6%AF%8F%E5%91%A8/">21-7-27 每周</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-07-18T13:23:58.000Z">2021-07-18</time></p><p class="title"><a href="/2021/07/18/21-7-18-%E6%AF%8F%E5%91%A8/">21-7-18 每周.md</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-05-23T13:02:40.000Z">2021-05-23</time></p><p class="title"><a href="/2021/05/23/21-5-23-%E6%AF%8F%E5%91%A8/">21-5-23 每周</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-05-09T13:25:02.000Z">2021-05-09</time></p><p class="title"><a href="/2021/05/09/21-5-9-%E6%AF%8F%E5%91%A8/">21-5-9 每周</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-04-25T14:15:23.000Z">2021-04-25</time></p><p class="title"><a href="/2021/04/25/21-4-25-%E6%AF%8F%E5%91%A8/">21-4-25 每周</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">十一月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">十月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/09/"><span class="level-start"><span class="level-item">九月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/08/"><span class="level-start"><span class="level-item">八月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">六月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/02/"><span class="level-start"><span class="level-item">二月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">十一月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/10/"><span class="level-start"><span class="level-item">十月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/09/"><span class="level-start"><span class="level-item">九月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/08/"><span class="level-start"><span class="level-item">八月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/07/"><span class="level-start"><span class="level-item">七月 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/06/"><span class="level-start"><span class="level-item">六月 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/05/"><span class="level-start"><span class="level-item">五月 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/04/"><span class="level-start"><span class="level-item">四月 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">三月 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/02/"><span class="level-start"><span class="level-item">二月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">一月 2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">十二月 2018</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/2018/"><span class="tag">2018</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/2019/"><span class="tag">2019</span><span class="tag">35</span></a></div><div class="control"><a class="tags has-addons" href="/tags/2020/"><span class="tag">2020</span><span class="tag">34</span></a></div><div class="control"><a class="tags has-addons" href="/tags/2021/"><span class="tag">2021</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Go/"><span class="tag">Go</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MongoDB/"><span class="tag">MongoDB</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NoSql/"><span class="tag">NoSql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/QT/"><span class="tag">QT</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/boorstrap/"><span class="tag">boorstrap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/burp/"><span class="tag">burp</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/crawler/"><span class="tag">crawler</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/electron/"><span class="tag">electron</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jquery/"><span class="tag">jquery</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/js/"><span class="tag">js</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/php/"><span class="tag">php</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/weekly/"><span class="tag">weekly</span><span class="tag">54</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%A1%E7%89%8C/"><span class="tag">卡牌</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/"><span class="tag">游戏设计</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%80%E5%8E%861/"><span class="tag">简历1</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="ExcitingFrog" height="28"></a><p class="is-size-7"><span>&copy; 2021 Xingo</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
